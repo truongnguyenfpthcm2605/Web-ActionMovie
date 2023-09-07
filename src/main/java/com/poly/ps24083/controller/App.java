@@ -1,6 +1,7 @@
 package com.poly.ps24083.controller;
 
 import java.io.IOException;
+import java.io.Serial;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -16,6 +17,7 @@ import com.poly.ps24083.enity.Video;
 public class App extends HttpServlet {
 	VideoImlpl videodao = new VideoImlpl();
 
+	@Serial
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

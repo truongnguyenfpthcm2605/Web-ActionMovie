@@ -19,7 +19,7 @@ function showsuccess(input) {
     span.innerText = ''
 }
 function checknull(input){
-	if(input.value.trim() == ""){
+	if(input.value.trim() === ""){
 		 showerror(input, 'Không được bỏ trống ')
 	}else{
 		 showsuccess(input)

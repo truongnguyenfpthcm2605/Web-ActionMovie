@@ -1,13 +1,12 @@
 package com.poly.ps24083.dao;
 
-import java.util.Iterator;
+
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.Query;
 
-import com.poly.ps24083.enity.Users;
 import com.poly.ps24083.service.JpaProgram;
 
 public class DAO<T> {

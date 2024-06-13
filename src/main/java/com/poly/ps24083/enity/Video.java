@@ -1,6 +1,6 @@
 package com.poly.ps24083.enity;
 
-import java.sql.Timestamp;
+
 import java.util.Date;
 import java.util.List;
 
@@ -14,9 +14,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-import org.hibernate.annotations.CreationTimestamp;
 
-import com.poly.ps24083.empl.VideoImlpl;
+
 
 @Entity
 @Table(name = "VIDEO", uniqueConstraints = { @UniqueConstraint(columnNames = { "idgenre" }) })

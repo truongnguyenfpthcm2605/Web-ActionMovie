@@ -90,7 +90,7 @@ h2 {
 }
 </style>
 </head>
-<body style="width: 100vw" >
+<body   >
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="apps" id="actionMovie" style="width: 100%">
 			<jsp:include page="Allfilm.jsp"></jsp:include>

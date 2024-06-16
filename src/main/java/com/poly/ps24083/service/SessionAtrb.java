@@ -1,11 +1,10 @@
 package com.poly.ps24083.service;
 
 import java.nio.file.Files;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.Part;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.*;
 
 public class SessionAtrb {
 	public static final String Current_User = "currentUser";
@@ -26,30 +25,39 @@ public class SessionAtrb {
 		return "Chưa Có Thể Loại";
 	}
 
-	public static String writeFileImg(HttpServletRequest request, String path) {
-		try {
-			int randomNumber = (int) (Math.random() * 500);
-//			String realpath = request.getServletPath().getRealPath("/images");
-//			Path path1 = Paths.get(realpath);
-//			if (!Files.exists(path1)) {
-//				Files.createDirectory(path1);
-//			}
-//			Part photo = realpath.getPart(path);
-//			if (photo != null) {
-//				String filename = photo.getSubmittedFileName();
-//				if (filename != null && !filename.isEmpty()) {
-//					String[] line = filename.split("\\.");
-//					String writeFilename = line[0] + randomNumber +"."+ line[1];
-//					photo.write(realpath + "/" + writeFilename);
-//					System.out.println(writeFilename);
-//					return writeFilename;
-//				}
-//			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			return null;
-		}
-		return null;
-	}
+//	public static String writeFileImg(HttpServletRequest request, String partName) {
+//	    try {
+//	        int randomNumber = (int) (Math.random() * 500);
+//	        String realPath = request.getServletContext().getRealPath("/images");
+//	        Path path = Paths.get(realPath);
+//	        
+//	        // Tạo thư mục nếu chưa tồn tại
+//	        if (!Files.exists(path)) {
+//	            Files.createDirectories(path);
+//	        }
+//	        
+//	        // Lấy phần file ảnh từ request
+//	        Part photo = request.getPart(partName);
+//	        if (photo != null) {
+//	            String filename = photo.getSubmittedFileName();
+//	            if (filename != null && !filename.isEmpty()) {
+//	                // Đảm bảo có thể tách tên file và phần mở rộng
+//	                int dotIndex = filename.lastIndexOf('.');
+//	                if (dotIndex > 0 && dotIndex < filename.length() - 1) {
+//	                    String baseName = filename.substring(0, dotIndex);
+//	                    String extension = filename.substring(dotIndex + 1);
+//	                    String writeFilename = baseName + randomNumber + "." + extension;
+//	                    photo.write(realPath + "/" + writeFilename);
+//	                    System.out.println(writeFilename);
+//	                    return writeFilename;
+//	                }
+//	            }
+//	        }
+//	    } catch (Exception e) {
+//	        e.printStackTrace();
+//	        return null;
+//	    }
+//	    return null;
+//	}
 }
 
